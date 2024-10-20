@@ -42,6 +42,12 @@ python-multipart==0.0.13
 
 ## Running the Application
 
+#### Streamlit Demo:
+![Streamlit Screenshot](screenshots/streamlit_screenshot.png)
+
+#### FastAPI Demo:
+![FastAPI Screenshot](screenshots/fastapi_screenshot.png)
+
 ### FastAPI Backend
 
 To start the FastAPI server, run:
