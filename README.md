@@ -1,46 +1,55 @@
-# Visual Question Answering Tool
+# 🤖 Visual Question Answering (VQA) Tool
 
-This project implements a Visual Question Answering (VQA) tool using the Visual Language Transformer (ViLT) model. It provides both a Streamlit web application and a FastAPI backend to allow users to upload images and ask questions about them.
+## 🌟 Project Overview
 
-## Features
+Unlock the power of AI-driven image understanding with our cutting-edge Visual Question Answering tool! Leveraging the advanced ViLT (Vision-and-Language Transformer) model, this innovative application allows users to upload images and ask intelligent questions about their contents.
 
-- Upload images and ask questions to receive answers.
-- Utilizes the ViLT model for processing both visual and textual inputs.
-- Built with FastAPI for the backend and Streamlit for the frontend.
+## ✨ Key Features
 
-## Installation
+- 🖼️ **Image-Text Interaction**: Upload any image and ask questions
+- 🧠 **Advanced AI Model**: Powered by ViLT Transformer
+- 🌐 **Dual Interface**: 
+  - FastAPI Backend for programmatic access
+  - Streamlit Frontend for interactive user experience
+- 🚀 **Intelligent Answers**: Receive contextual responses about image contents
 
-To get started, clone this repository and install the required dependencies.
+## 🛠 Technology Stack
 
-### Requirements
+- **AI Model**: Hugging Face Transformers (ViLT)
+- **Backend**: FastAPI
+- **Frontend**: Streamlit
+- **Machine Learning**: PyTorch
+- **Language**: Python 3.8+
 
-Create a `requirements.txt` file with the following content:
+## 🚀 Quick Start Guide
 
-```plaintext
-transformers==4.45.2
-torch==2.5.0
-requests==2.32.3
-pillow==10.4.0
-fastapi==0.115.2
-uvicorn==0.32.0
-streamlit==1.39.0
-python-multipart==0.0.13
-```
+### Prerequisites
 
-## Setup
-1. **Clone the repository:**
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-2. **Create and activate a Conda virtual environment:**
-    ```bash
-    conda create --name vqa-env python=3.8
-    conda activate vqa-env
-3. **Install the requirements:**
-    ```bash
-    pip install -r requirements.txt
+Before you begin, ensure you have:
+- Python 3.8+
+- Conda (recommended)
+- pip package manager
 
-## Running the Application
+### Installation Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/dinesh-gaire/Visual-QA-tool-using-ViLT-open-source-model.git
+   cd Visual-QA-tool-using-ViLT-open-source-model
+   ```
+
+2. **Create Conda Environment**
+   ```bash
+   conda create --name vqa-env python=3.8
+   conda activate vqa-env
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 💻 Running the Application
 
 #### Streamlit Demo:
 ![Streamlit Screenshot](screenshots/streamlit_screenshot.png)
@@ -49,51 +58,88 @@ python-multipart==0.0.13
 ![FastAPI Screenshot](screenshots/fastapi_screenshot.png)
 
 ### FastAPI Backend
-
-To start the FastAPI server, run:
-
-    uvicorn api:app --reload
-    
-The API will be available at ``http://127.0.0.1:8000``.
+```bash
+uvicorn api:app --reload
+```
+🌐 Access at: `http://127.0.0.1:8000`
 
 ### Streamlit Frontend
+```bash
+streamlit run app.py
+```
+🖥️ Access at: `http://localhost:8501`
 
-To run the Streamlit application, execute:
+## 🔍 How It Works
 
-    streamlit run app.py
+### User Workflow
+1. 📤 Upload an Image
+2. ❓ Ask a Question
+3. 🤖 Receive AI-Generated Answer
 
-The Streamlit app will be available at ``http://localhost:8501``.
+### Supported Interactions
+- Describe image contents
+- Answer specific questions
+- Provide contextual insights
 
-## Usage
+## 🌈 Example Use Cases
 
-1. **Upload an Image:** Use the Streamlit app to upload an image.
-2. **Ask a Question:** Enter a question related to the uploaded image.
-3. **Get Answer:** Click the "Ask Question" button to receive an answer.
+- 🏞️ Describe landscape details
+- 🍽️ Identify objects in a scene
+- 📚 Extract text from images
+- 🧩 Understand complex visual scenarios
 
-### Example Output
+## 🛡️ API Endpoint Details
 
-## API Endpoint
-You can also interact with the VQA model via the FastAPI endpoint:
-
-### POST /answer
-* **Request Body:**
-    
-    * **image:** Image file (required)
-    * **text:** Question text (optional)
-
-* **Response:** A JSON object containing the answer.
+### `/answer` Endpoint
+- **Method**: POST
+- **Inputs**: 
+  - `image`: Image file
+  - `text`: Question text
+- **Output**: JSON with AI-generated answer
 
 ### Example cURL Request
+```bash
+curl -X POST "http://127.0.0.1:8000/answer" \
+     -F "image=@path/to/image.jpg" \
+     -F "text=What is in this image?"
+```
 
-    curl -X POST "http://127.0.0.1:8000/answer" -F "image=@path/to/image.jpg" -F "text=What is in this image?"
-    
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any suggestions or improvements.
+## 🤝 Contribution Guidelines
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+### Ways to Contribute
+- Report Bugs
+- Suggest Features
+- Improve Documentation
+- Submit Pull Requests
 
-## Acknowledgments
-* Hugging Face Transformers
-* FastAPI
-* Streamlit
+### Contribution Steps
+1. Fork the Repository
+2. Create a Feature Branch
+3. Implement Changes
+4. Submit a Pull Request
+
+## 🏆 Key Advantages
+
+- 🚀 Rapid Image Understanding
+- 💡 Contextual AI Insights
+- 🔬 Advanced Machine Learning
+- 🌐 Multiple Access Methods
+
+## 📄 License
+
+MIT License - See `LICENSE` file for details.
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+- Hugging Face Transformers
+- FastAPI Team
+- Streamlit Community
+
+---
+
+**Disclaimer**: This is an AI-assisted tool. Results may vary based on image complexity and question specificity.
+
+## 📞 Support
+
+Need help? [Open an Issue](your-github-repo-issues-link)
